@@ -1,0 +1,44 @@
+.header{
+  font-family: "Major Mono Display", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #5f5d5c;
+  text-align: center;
+  font-size: 30px;
+  background: rgba(255,255,255,0.5);
+  padding: 10px;
+  
+}
+.button {
+  background-color: rgba(255,255,255,0.09);
+  border: 1px solid rgba(0,0,0,0.09);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 6px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #5f5d5c;
+  cursor: pointer;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 29px;
+  padding: 8px 26px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  background-color: #f7fafa;
+}
+
+.button:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
