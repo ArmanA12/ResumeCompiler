@@ -42,7 +42,7 @@
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   outline: 0;
 }
-/* Grid Container */
+
 .grid-container {
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +53,6 @@
   height: 100%;
 }
 
-/* Grid Cell Base Styles */
 .cell {
   width: 40px;
   height: 40px;
@@ -89,7 +88,11 @@
   }
 }
 
-/* Animated Cell Class */
 .animated-cell {
   animation: glow 1.5s infinite ease-in-out;
+}
+@keyframes colorChange {
+  0% { background-color: #ffcc00; }
+  50% { background-color: #ff6699; }
+  100% { background-color: #ffcc00; }
 }
