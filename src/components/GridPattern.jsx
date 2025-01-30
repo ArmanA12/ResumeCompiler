@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 
 const GridComponent = () => {
-  const columns = 48;
+  const columns = 47;
   const rows = 11;
   const totalCells = columns * rows;
   const [animatedCells, setAnimatedCells] = useState([]);
