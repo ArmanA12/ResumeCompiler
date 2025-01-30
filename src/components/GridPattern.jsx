@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GridComponent = () => {
-  const columns = 51;
+  const columns = 45;
   const rows = 11;
 
   return (
@@ -12,10 +12,10 @@ const GridComponent = () => {
           return (
             <div
               key={`${col}-${row}`}
-              className={`w-10 h-10 flex flex-shrink-0 rounded-[2px] ${
+              className={`w-10 h-10 flex flex-shrink-0 rounded-[1px] ${
                 index % 2 === 0
-                  ? "bg-gray-50  shadow-[0px_0px_1px_3px_rgba(255,255,255,1)_inset] shadow-[0px_0px_1px_3px_rgba(0,0,0,1)_inset]"
-                  : "bg-gray-50 "
+                  ? "bg-gray-50 hoverbox shadow-[0px_0px_1px_2px_rgba(255,255,255,2)_inset]"
+                  : "bg-gray-50 hoverbox "
               }`}
             />
           );
