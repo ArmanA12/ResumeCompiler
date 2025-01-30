@@ -42,28 +42,54 @@
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   outline: 0;
 }
-.cell {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+/* Grid Container */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  width: 100%;
+  height: 100%;
 }
 
-.cell:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition:1.2s;
-  transform:rotate(90deg);
+/* Grid Cell Base Styles */
+.cell {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background-color: #f3f4f6; /* Light gray background */
+  transition: all 0.3s ease-in-out;
 }
-@keyframes pulse {
+
+/* Alternate Cell Style (for the checkerboard pattern) */
+.cell.alternate {
+  box-shadow:
+    inset 0px 0px 1px 3px rgba(255, 255, 255, 1),
+    inset 0px 0px 1px 3px rgba(0, 0, 0, 1);
+}
+
+/* Glow Animation Keyframes */
+@keyframes glow {
   0% {
     transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    opacity: 0.7;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
   }
   100% {
     transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   }
 }
 
-.cell {
-  animation: pulse 2s infinite ease-in-out;
+/* Animated Cell Class */
+.animated-cell {
+  animation: glow 1.5s infinite ease-in-out;
 }
