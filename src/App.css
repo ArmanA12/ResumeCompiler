@@ -54,45 +54,44 @@
 }
 
 .cell {
-  width: 40px;
-  height: 40px;
+  width: 39px;
+  height: 39px;
   flex-shrink: 0;
-  border-radius: 2px;
-  background-color: #f3f4f6; /* Light gray background */
+  border-radius: 3px;
+  background-color: #f3f4f6;
   transition: all 0.3s ease-in-out;
 }
 
-/* Alternate Cell Style (for the checkerboard pattern) */
+
 .cell.alternate {
   box-shadow:
     inset 0px 0px 1px 3px rgba(255, 255, 255, 1),
     inset 0px 0px 1px 3px rgba(0, 0, 0, 1);
 }
 
-/* Glow Animation Keyframes */
+
 @keyframes glow {
   0% {
     transform: scale(1);
+    transform: rotate(180deg);
     opacity: 1;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    background-image: linear-gradient(to right top, #fff6d4, #ffe9cb, #ffdcca, #ffd0cf, #ffc7d9);
   }
   50% {
     transform: scale(1.1);
     opacity: 0.7;
     box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    background-image: linear-gradient(to right top, #ffc7d9, #ffd0cf, #ffdcca, #ffe9cb, #fff6d4);
   }
   100% {
     transform: scale(1);
     opacity: 1;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    background-image: linear-gradient(to right top, #d7ffd4, #fef2c3, #ffe5cd, #ffdfe7, #fee1ff); }
   }
-}
 
 .animated-cell {
   animation: glow 1.5s infinite ease-in-out;
 }
-@keyframes colorChange {
-  0% { background-color: #ffcc00; }
-  50% { background-color: #ff6699; }
-  100% { background-color: #ffcc00; }
-}
+
